@@ -18,10 +18,5 @@
         "psr-0": { "Morki\\BounceBundle": "" }
     },
     "target-dir": "Morki/BounceBundle",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "master"
-        }
-    },
     "minimum-stability": "dev"
 }
