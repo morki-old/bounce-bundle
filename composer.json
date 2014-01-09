@@ -1,0 +1,27 @@
+{
+    "name": "morki/bounce-bundle",
+    "description": "Bundle for fast starting new Symfony2 project",
+    "keywords": ["controller","kernel","paginator"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lukas Moravec",
+            "email": "morki@morki.cz"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "~2.2",
+        "doctrine/doctrine-bundle": "*"
+    },
+    "autoload": {
+        "psr-0": { "Morki\\BounceBundle": "" }
+    },
+    "target-dir": "Morki/BounceBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master"
+        }
+    },
+    "minimum-stability": "dev"
+}

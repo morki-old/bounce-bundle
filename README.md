@@ -1,4 +1,6 @@
-bounce-bundle
-=============
+BounceBundle
+============
 
-Bundle for fast starting new Symfony2 project
+Bundle for fast starting new Symfony2 project.
+
+Related to BounceEdition.
