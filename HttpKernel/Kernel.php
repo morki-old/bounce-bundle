@@ -60,7 +60,7 @@ abstract class Kernel extends BaseKernel
         if (true === $debug)
             Debug::enable();
 
-        $kernel = new self($environment, $debug);
+        $kernel = new static($environment, $debug);
         $kernel->loadClassCache();
 
         $request = Request::createFromGlobals();
