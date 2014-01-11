@@ -39,12 +39,12 @@ class Controller extends ContainerAware
         $this->getEntityManager()->flush($entity);
     }
 
-    public function trans($message)
+    public function translate($message)
     {
         return $this->get('translator')->trans($message);
     }
 
-    public function json($data)
+    public function jsonResponse($data)
     {
         return new JsonResponse($data);
     }
@@ -55,7 +55,7 @@ class Controller extends ContainerAware
         return $this->redirectUrl($referer);
     }
 
-    public function flash($type, $message)
+    public function addFlash($type, $message)
     {
         $this->getSession()->getFlashBag()->add($type, $message);
     }
