@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Morki\BounceBundle\Paginator\Paginator;
+use Doctrine\ORM\QueryBuilder;
 
 class Controller extends ContainerAware
 {
