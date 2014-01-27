@@ -3,6 +3,14 @@
 namespace Morki\BounceBundle\Controller;
 
 use Symfony\Component\DependencyInjection\ContainerAware;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\StreamedResponse;
+use Symfony\Component\HttpKernel\HttpKernelInterface;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Morki\BounceBundle\Paginator\Paginator;
 
 class Controller extends ContainerAware
 {
@@ -55,7 +63,7 @@ class Controller extends ContainerAware
         return $this->redirectUrl($referer);
     }
 
-    public function addFlash($type, $message)
+    public function flash($type, $message)
     {
         $this->getSession()->getFlashBag()->add($type, $message);
     }
@@ -201,5 +209,10 @@ class Controller extends ContainerAware
         $response->setCallback($callback);
 
         return $response;
+    }
+
+    public function paginate(QueryBuilder $qb, $page, $limit = 20)
+    {
+        return new Paginator($qb, $limit, $page);
     }
 }
