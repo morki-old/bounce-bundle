@@ -90,6 +90,7 @@ abstract class Kernel extends BaseKernel
     {
         return array_merge(
             array(
+                'kernel.var_dir' => $this->getVarDir(),
                 'kernel.config_dir' => $this->getConfigDir(),
             ),
             parent::getKernelParameters()
